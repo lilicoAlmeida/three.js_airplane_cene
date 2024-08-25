@@ -1,0 +1,93 @@
+body {
+    background-color: #43d1d1;
+    background-image: url('/image/nuvens-de-estilo-anime.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #252727;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo de Nuvem para o Texto "Página em construção" */
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #ffffff;
+    color: #2e9494;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1::before {
+    top: -25px;
+    left: -30px;
+}
+
+h1::after {
+    bottom: -25px;
+    right: -30px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        background-image: url('/image/nuvens-de-estilo-anime-mobile.jpg');
+        background-size: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    body {
+        background-size: cover;
+        background-position: top;
+    }
+}
